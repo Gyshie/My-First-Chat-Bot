@@ -1,0 +1,62 @@
+<html>
+    <head>
+	<title> My First Chat Bot </title>
+	<link rel="shortcut icon" type="image/png" href="https://cdn3.iconfinder.com/data/icons/chat-bot-emoji-filled-color/300/35613265Untitled-3-128.png"/>
+        <script>
+
+            var know ={
+                "hello" : "hi",
+				"hi" : "hey",
+				"hey" : "hello",
+				"how are you?" : "I'm Fine. Thank you :)",
+                "how are you" : "I'm good :)",
+                "ok" : ":)" ,
+				"who are you" : "I'm Blu.",
+				"who made you" : "Gayasha made me",
+				"what is your name":"My name is Blu :)",
+				"who gave you that name":"Gayasha owns me and she put that nameto me",
+				"Are you human":"No, I'm a bot made with JS",
+				"Are you real":"Yes ;) I'm real in my code",
+				"How old are you":"I have not age. I'm immortal ;)",
+				"where do you live":"I'm living inside my codes",
+				"how can you help me":"I can make you happy with chatting :)",
+				"which languages do you speak":"i can only speak ENglish for now. But i will improve my language skills soon :)",
+				"are you doing ok":"yes, I am super happy :)",
+				"what are your hobbies":"Nothing more than chat with you! :)",
+				"what do you look like":"it's me in the page wallpaper :)",
+				"are you a robot":"i am a chat bot :)",
+				"":"",
+				"":"",
+				"":"",
+				"":"",
+				"":"",
+				"":"",
+            };
+            function talk(){
+               var user = document.getElementById("userBox").value; 
+               document.getElementById("chatLog").innerHTML += user+"<br>";
+
+            if (user in know){
+                document.getElementById("chatLog").innerHTML += know[user] +"<br>";
+            }else {
+                document.getElementById("chatLog").innerHTML += "I don't Understand :( <br>";
+
+            }}
+			
+            </script>
+
+    </head>
+    <body background="http://www.chatlab.io/assets/images/robot.gif">
+	<center>
+	<h1> - - C H A T - - <br></h1>
+	<h3> Hi I'm Blu! <br></h3>
+	
+        <p id="chatLog">Continue Chat Here...<br></p>
+        <input id="userBox" type="text" onKeydown="if(event.keyCode == 13){talk()}">
+		
+		<p> Here is my First Chat Bot using JS! He still on Testing. Sorry if there's a mistake! <br><p>
+
+</center>
+    </body>
+	
+</html>
